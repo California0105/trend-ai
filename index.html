@@ -83,9 +83,10 @@
         .card-img-top {
             width: 100%;
             height: 200px; /* Increased height for better visual */
-            object-fit: cover;
+            object-fit: contain; /* Changed to contain to better display logos */
             border-top-left-radius: 12px;
             border-top-right-radius: 12px;
+            padding: 10px; /* Add some padding for logos */
         }
         .card-body {
             flex-grow: 1;
@@ -321,6 +322,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             予測3：テクノロジー活用が必須の時代へ
                         </button>
+                    </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#outlook-accordion">
                         <div class="accordion-body">
@@ -349,8 +351,8 @@
                             <p><strong>具体的な什器需要：</strong></p>
                             <ul>
                                 <li><strong>生鮮・冷凍食品：</strong>視認性が高く、商品を手に取りやすいリーチイン冷蔵・冷凍ケース。特売品をアピールできるアイランド型平ケース。</li>
-                                <li><strong>惣菜・ベーカリー：</strong>出来立て感を演出し、食欲をそそる保温・保冷機能付きデリカ什器。衛生管理とデザイン性を両立したパン陳列棚。</li>
-                                <li><strong>飲料：</strong>店舗の入口付近やレジ横に設置し、衝動買いを誘う小型の冷蔵ショーケース。</li>
+                                <li><strong>惣菜・ベーカリー：：</strong>出来立て感を演出し、食欲をそそる保温・保冷機能付きデリカ什器。衛生管理とデザイン性を両立したパン陳列棚。</li>
+                                <li><strong>飲料：：</strong>店舗の入口付近やレジ横に設置し、衝動買いを誘う小型の冷蔵ショーケース。</li>
                             </ul>
                         </div>
                     </div>
@@ -364,13 +366,13 @@
                     <div id="salesCollapseTwo" class="accordion-collapse collapse" aria-labelledby="salesHeadingTwo" data-bs-parent="#sales-accordion">
                         <div class="accordion-body">
                             <p><strong>店舗像：</strong>健康相談カウンターやオンライン診療ブースを併設したドラッグストア</p>
-                            <p><strong>顧客への訴求ポイント：</strong>「地域住民の健康をサポートする、信頼感と専門性の高い空間づくりをお手伝いします」</p>
+                            <p><strong>顧客への訴求ポイント：：</strong>「地域住民の健康をサポートする、信頼感と専門性の高い空間づくりをお手伝いします」</p>
                             <hr>
-                            <p><strong>具体的な什器需要：</strong></p>
+                            <p><strong>具体的な什器需要：：</strong></p>
                             <ul>
-                                <li><strong>相談カウンター：</strong>プライバシーに配慮し、落ち着いて相談できるデザインの受付カウンターやパーテーション。</li>
-                                <li><strong>測定コーナー：</strong>血圧計や体組成計などを設置でき、関連商品を近くに陳列できる一体型什器。</li>
-                                <li><strong>専門商品棚：</strong>サプリメントや介護用品など、カテゴリーごとに専門性を高く見せられる照明・POP一体型のゴンドラ什器。</li>
+                                <li><strong>相談カウンター：：</strong>プライバシーに配慮し、落ち着いて相談できるデザインの受付カウンターやパーテーション。</li>
+                                <li><strong>測定コーナー：：</strong>血圧計や体組成計などを設置でき、関連商品を近くに陳列できる一体型什器。</li>
+                                <li><strong>専門商品棚：：</strong>サプリメントや介護用品など、カテゴリーごとに専門性を高く見せられる照明・POP一体型のゴンドラ什器。</li>
                             </ul>
                         </div>
                     </div>
@@ -383,14 +385,14 @@
                     </h2>
                     <div id="salesCollapseThree" class="accordion-collapse collapse" aria-labelledby="salesHeadingThree" data-bs-parent="#sales-accordion">
                         <div class="accordion-body">
-                            <p><strong>店舗像：</strong>セルフレジ、デジタルサイネージ、スマートシェルフなどを導入した次世代店舗</p>
-                            <p><strong>顧客への訴求ポイント：</strong>「店舗運営の効率化と、新しい顧客体験の創出を、什器の観点からサポートします」</p>
+                            <p><strong>店舗像：：</strong>セルフレジ、デジタルサイネージ、スマートシェルフなどを導入した次世代店舗</p>
+                            <p><strong>顧客への訴求ポイント：：</strong>「店舗運営の効率化と、新しい顧客体験の創出を、什器の観点からサポートします」</p>
                             <hr>
-                            <p><strong>具体的な什器需要：</strong></p>
+                            <p><strong>具体的な什器需要：：</strong></p>
                             <ul>
-                                <li><strong>レジ周辺：</strong>多様な決済端末に対応し、スムーズな会計動線を実現するセルフレジ・セミセルフレジ用カウンター。</li>
-                                <li><strong>販促・情報発信：</strong>デジタルサイネージを組み込み、タイムリーな情報発信が可能なエンド棚やプロモーション什器。</li>
-                                <li><strong>在庫管理：</strong>重量センサーやカメラを内蔵・後付けでき、在庫管理や発注を自動化する「スマートシェルフ」対応の棚。</li>
+                                <li><strong>レジ周辺：：</strong>多様な決済端末に対応し、スムーズな会計動線を実現するセルフレジ・セミセルフレジ用カウンター。</li>
+                                <li><strong>販促・情報発信：：</strong>デジタルサイネージを組み込み、タイムリーな情報発信が可能なエンド棚やプロモーション什器。</li>
+                                <li><strong>在庫管理：：</strong>重量センサーやカメラを内蔵・後付けでき、在庫管理や発注を自動化する「スマートシェルフ」対応の棚。</li>
                             </ul>
                         </div>
                     </div>
@@ -606,7 +608,7 @@
         const companyData = {
             'ウエルシアHD': {
                 total: '約2,825店舗',
-                img: 'https://images.unsplash.com/photo-1629115532296-4a7371859b9d?q=80&w=1932&auto=format&fit=crop',
+                img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/%E3%82%A6%E3%82%A8%E3%83%AB%E3%82%B7%E3%82%A2%E3%83%AD%E3%82%B4.svg/1200px-%E3%82%A6%E3%82%A8%E3%83%AB%E3%82%B7%E3%82%A2%E3%83%AD%E3%82%B4.svg.png',
                 breakdown: {
                     '北海道': 7, '東北': 201, '関東': 1377, '中部': 592, '近畿': 529, '中国': 166, '四国': 70, '九州・沖縄': 54
                 },
@@ -621,7 +623,7 @@
             },
             'ツルハHD': {
                 total: '約2,662店舗',
-                img: 'https://images.unsplash.com/photo-1576670393499-931534a056b4?q=80&w=1974&auto=format&fit=crop',
+                img: 'https://www.tsuruha-hd.co.jp/img/logo.png', // Assuming this is the logo URL from their site
                 breakdown: {
                     '北海道': 564, '青森': 85, '岩手': 104, '宮城': 204, '秋田': 102, '山形': 118, '福島': 135, '茨城': 59, '栃木': 39, '埼玉': 13, '千葉': 208, '東京': 200, '神奈川': 65, '新潟': 34, '山梨': 37, '長野': 20, '静岡': 179, '愛知': 125, '滋賀': 7, '京都': 7, '大阪': 32, '兵庫': 39, '和歌山': 18, '鳥取': 55, '島根': 82, '岡山': 18, '広島': 274, '山口': 68, '徳島': 31, '香川': 60, '愛媛': 145, '高知': 35, '福岡': 132
                 },
@@ -636,7 +638,7 @@
             },
             'マツキヨココカラ＆カンパニー': {
                 total: '約3,464店舗',
-                img: 'https://images.unsplash.com/photo-1595153332658-1329389a1d78?q=80&w=2070&auto=format&fit=crop',
+                img: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Matsukio_cocokara_co_logo.svg',
                 breakdown: {
                     '関東': 1522, '近畿': 740, '東海': 330, '九州・沖縄': 312, '甲信越・北陸': 246, '中国・四国': 220, '東北': 112, '北海道': 17
                 },
@@ -651,7 +653,7 @@
             },
             'スギHD': {
                 total: '約1,986店舗',
-                img: 'https://images.unsplash.com/photo-1580913428023-02c695666d61?q=80&w=2070&auto=format&fit=crop', // Placeholder
+                img: 'https://www.sugi-hd.co.jp/img/logo.png', // Assuming this is the logo URL from their site
                 breakdown: {
                     '関西': 818, '中部': 616, '関東': 589, '北陸・信州': 96, '九州': 38, '北海道・東北': 43, '中国・四国': 7
                 },
@@ -666,7 +668,7 @@
             },
             'コスモス薬品': {
                 total: '約1,615店舗',
-                img: 'https://images.unsplash.com/photo-1580913428023-02c695666d61?q=80&w=2070&auto=format&fit=crop', // Placeholder
+                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZn0Y08_SbJKGOsjLG2exua0j-kVINBzpszg',
                 breakdown: {
                     '九州': 651, '近畿': 258, '中国': 223, '関東': 180, '四国': 153, '中部': 150
                 },
@@ -681,7 +683,7 @@
             },
             'サンドラッグ': {
                 total: '約1,542店舗',
-                img: 'https://images.unsplash.com/photo-1580913428023-02c695666d61?q=80&w=2070&auto=format&fit=crop', // Placeholder
+                img: 'https://www.sundrug.co.jp/img/logo.png', // Assuming this is the logo URL from their site
                 breakdown: {
                     '関東': 497, '中部': 220, '近畿': 197, '九州': 84, '北海道': 80, '東北': 76, '中国・四国': 31
                 },
@@ -696,7 +698,7 @@
             },
             'イオン': {
                 total: '約549店舗（GMS）',
-                img: 'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=1974&auto=format&fit=crop',
+                img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/AEON_logo.svg/1200px-AEON_logo.svg.png',
                 breakdown: {
                     '関東': 128, '近畿': 109, '中部': 106, '九州沖縄': 75, '東北': 58, '北海道': 39, '中国': 24, '四国': 10
                 },
@@ -711,7 +713,7 @@
             },
             'ライフ': {
                 total: '約312店舗',
-                img: 'https://images.unsplash.com/photo-1588964895597-cf29a31d9d8a?q=80&w=1974&auto=format&fit=crop',
+                img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/LIFE_CORPORATION_logo.png/1024px-LIFE_CORPORATION_logo.png',
                 breakdown: {
                     '大阪府': 127, '東京都': 100, '神奈川県': 33, '兵庫県': 21, '京都府': 19, '埼玉県': 8, '千葉県': 5, '奈良県': 3
                 },
@@ -726,7 +728,7 @@
             },
             'ハシドラッグ': {
                 total: '14～16店舗',
-                img: 'https://images.unsplash.com/photo-1580913428023-02c695666d61?q=80&w=2070&auto=format&fit=crop', // Placeholder
+                img: 'https://www.hashi-drug.co.jp/images/logo.png', // Assuming this is the logo URL from their site
                 breakdown: {
                     '福島県': '14～16'
                 },
