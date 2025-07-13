@@ -5,50 +5,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>業界ニュース速報 | ドラッグストア＆スーパーマーケット</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
+            font-family: 'Noto Sans JP', sans-serif;
             background-color: #f8f9fa;
+            color: #343a40;
         }
         .hero {
-            background-color: #007bff;
+            background-image: url('https://images.unsplash.com/photo-1580913428023-02c695666d61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 4rem 2rem;
+            padding: 8rem 2rem;
             text-align: center;
+            text-shadow: 0 4px 6px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3); /* Overlay for better text readability */
+            z-index: 1;
+        }
+        .hero > * {
+            position: relative;
+            z-index: 2;
         }
         .section-title {
-            margin-top: 3rem;
-            margin-bottom: 2rem;
+            margin-top: 4rem;
+            margin-bottom: 2.5rem;
             text-align: center;
-            font-weight: bold;
+            font-weight: 700;
+            color: #0056b3;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #007bff;
+            margin: 10px auto 0;
+            border-radius: 2px;
         }
         .card-deck {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
         .card {
             border: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
         }
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
         .card-header {
-            font-weight: bold;
+            font-weight: 700;
+            background-color: #e9ecef;
+            color: #343a40;
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 1.25rem;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Increased height for better visual */
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+        .card-title {
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 0.75rem;
+        }
+        .card-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        .card-footer {
+            background-color: white;
+            border-top: none;
+            padding: 1rem 1.5rem;
+            text-align: right;
         }
         .trend-summary {
-            background-color: #e9ecef;
-            padding: 2rem;
-            border-radius: 0.5rem;
+            background-color: #e9f7ff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
+        .trend-summary ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .trend-summary li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            color: #333;
+        }
+        .trend-summary li strong {
+            color: #0056b3;
+        }
+        .accordion-item {
+            border: none;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+        }
+        .accordion-button {
+            background-color: #007bff;
+            color: white;
+            font-weight: 700;
+            border-radius: 8px !important;
+            padding: 1rem 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #0056b3;
+            color: white;
+        }
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+        }
+        .accordion-body {
+            padding: 1.5rem;
+            background-color: white;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            line-height: 1.7;
+            color: #444;
+        }
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+            border-bottom: none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .modal-title {
+            font-weight: 700;
+        }
+        .modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .modal-body .nav-tabs {
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: 1.5rem;
+        }
+        .modal-body .nav-link {
+            color: #007bff;
+            font-weight: 700;
+            border: none;
+            border-bottom: 3px solid transparent;
+            padding: 0.75rem 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .modal-body .nav-link.active {
+            color: #0056b3;
+            border-color: #007bff;
+            background-color: transparent;
+        }
+        .modal-body .nav-link:hover {
+            border-color: #a2d2ff;
+        }
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed #e9ecef;
+        }
+        .list-group-item:last-child {
+            border-bottom: none;
+        }
+        .badge {
+            font-size: 0.85em;
+            padding: 0.5em 0.75em;
+        }
+        .analysis-section h6 {
+            font-weight: 700;
+            color: #0056b3;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .analysis-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .analysis-section li {
+            background-color: #f0f8ff;
+            border-left: 4px solid #007bff;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+        .analysis-section p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        .analysis-section strong {
+            color: #0056b3;
         }
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <h1 class="display-4">業界ニュース速報</h1>
-        <p class="lead">ドラッグストア＆スーパーマーケットの最新動向をキャッチアップ</p>
+        <h1 class="display-3 fw-bold">業界ニュース速報</h1>
+        <p class="lead fs-4">ドラッグストア＆スーパーマーケットの最新動向と企業分析</p>
     </header>
 
     <div class="container mt-5">
@@ -63,6 +252,38 @@
                     <li><strong>DXとテクノロジー活用:</strong> AIによる需要予測、セルフレジ、ネットスーパーなど、業務効率化と顧客体験向上のための投資が活発化。</li>
                     <li><strong>ヘルスケアサービスの拡充:</strong> 調剤薬局併設型店舗の増加や、オンライン健康相談など、地域住民の健康を支える拠点としての役割を強化。</li>
                 </ul>
+            </div>
+        </section>
+
+        <section id="dx-trends" class="my-5">
+            <h2 class="section-title">業界別DX（デジタルトランスフォーメーション）の動向</h2>
+            <div class="card-deck">
+                <!-- ドラッグストアのDX -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">ドラッグストア業界のDX</div>
+                    <div class="card-body">
+                        <h5 class="card-title">AI活用で変わる店舗運営</h5>
+                        <p class="card-text">AIによる需要予測や在庫の自動発注は、欠品や食品ロスを削減し、業務効率を大幅に向上させます。また、AIカメラが顧客の行動を分析し、最適なタイミングでクーポンを発行するなど、一人ひとりに合わせた販促活動も可能になっています。</p>
+                        <ul>
+                            <li><strong>ウエルシア薬局:</strong> AIガードマンによる万引き防止</li>
+                            <li><strong>ツルハドラッグ:</strong> アプリを活用したデジタル販促</li>
+                            <li><strong>富士薬品:</strong> 顧客に合わせたクーポン発行端末</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- スーパーマーケットのDX -->
+                <div class="card">
+                    <div class="card-header bg-success text-white">スーパーマーケット業界のDX</div>
+                    <div class="card-body">
+                        <h5 class="card-title">テクノロジーが支える「食」の未来</h5>
+                        <p class="card-text">人手不足が深刻化する中、セルフレジや商品の自動スキャンカートの導入が進んでいます。また、ネットスーパーと実店舗の連携（クリック＆コレクト）も加速しており、AIによる従業員の作業割り当て自動化など、店舗全体の運営を効率化する動きが活発です。</p>
+                        <ul>
+                            <li><strong>ライフ:</strong> AIの需要予測による自動発注</li>
+                            <li><strong>イオン:</strong> 全社的なDX推進と作業割り当て自動化</li>
+                            <li><strong>イトーヨーカドー:</strong> 電子棚札による価格変更の効率化</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -177,6 +398,46 @@
             </div>
         </section>
 
+        <section id="store-search" class="my-5">
+            <h2 class="section-title">大手チェーン情報</h2>
+            <div class="input-group mb-4">
+                <input type="text" id="store-search-input" class="form-control" placeholder="企業名で検索..." onkeyup="searchStore()">
+            </div>
+            <div id="store-list" class="card-deck">
+                <!-- 店舗数カード（クリックでモーダル表示） -->
+            </div>
+        </section>
+
+        <!-- 詳細情報モーダル -->
+        <div class="modal fade" id="details-modal" tabindex="-1" aria-labelledby="details-modal-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="details-modal-label">詳細情報</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="details-modal-body">
+                        <ul class="nav nav-tabs" id="details-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="stores-tab" data-bs-toggle="tab" data-bs-target="#stores-content" type="button" role="tab" aria-controls="stores-content" aria-selected="true">店舗数</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="analysis-tab" data-bs-toggle="tab" data-bs-target="#analysis-content" type="button" role="tab" aria-controls="analysis-content" aria-selected="false">企業分析</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="details-tab-content">
+                            <div class="tab-pane fade show active" id="stores-content" role="tabpanel" aria-labelledby="stores-tab">
+                                <!-- 都道府県別の店舗数 -->
+                            </div>
+                            <div class="tab-pane fade" id="analysis-content" role="tabpanel" aria-labelledby="analysis-tab">
+                                <!-- 企業分析 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section id="drugstore-news">
             <h2 class="section-title">ドラッグストア業界ニュース</h2>
             <h3 class="h5 text-muted text-center mb-4">大手企業の動向</h3>
@@ -228,6 +489,16 @@
             </div>
             <h3 class="h5 text-muted text-center mt-5 mb-4">地場企業の動向</h3>
             <div class="card-deck">
+                <div class="card">
+                    <div class="card-header">ハシドラッグ（福島）</div>
+                    <div class="card-body">
+                        <h5 class="card-title">地域密着型の展開</h5>
+                        <p class="card-text">福島県内、特に県北地方を中心に店舗を展開。医薬品から食品まで幅広く取り扱い、地域住民の生活を支える。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://hashi-drug.co.jp/" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">公式サイト</a>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-header">M&Aによる再編</div>
                     <div class="card-body">
@@ -318,7 +589,7 @@
                         <p class="card-text">九州の地場スーパー「マルキョウ」がAmazonと協業しネットスーパー事業を開始。新たな販路拡大の動きも活発化。</p>
                     </div>
                     <div class="card-footer text-end">
-                        <a href="https.www.aboutamazon.jp/news/jp-press/20231128-marukyo-on-amazon" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">関連ニュース</a>
+                        <a href="https://www.aboutamazon.jp/news/jp-press/20231128-marukyo-on-amazon" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">関連ニュース</a>
                     </div>
                 </div>
             </div>
@@ -331,5 +602,208 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const companyData = {
+            'ウエルシアHD': {
+                total: '約2,825店舗',
+                img: 'https://images.unsplash.com/photo-1629115532296-4a7371859b9d?q=80&w=1932&auto=format&fit=crop',
+                breakdown: {
+                    '北海道': 7, '東北': 201, '関東': 1377, '中部': 592, '近畿': 529, '中国': 166, '四国': 70, '九州・沖縄': 54
+                },
+                analysis: {
+                    title: '2026年2月期 第1四半期',
+                    sales: '売上高: 3,344億円 (9.7%増)',
+                    profit: '営業利益: 78億円 (42.1%増)',
+                    summary: '調剤併設店舗の増加とPB商品の拡販が奏功し、大幅な増収増益を達成。ツルハとの経営統合を控え、今後の業界再編の核となる。',
+                    challenges: 'ツルハとの経営統合に伴うシステム・組織統合、PB商品の競争激化、人件費・物流コストの高騰。',
+                    sales_hint: '調剤併設店舗の増加やヘルスケアサービス強化のニーズに対応する提案。PB商品開発における協業の可能性を探る。'
+                }
+            },
+            'ツルハHD': {
+                total: '約2,662店舗',
+                img: 'https://images.unsplash.com/photo-1576670393499-931534a056b4?q=80&w=1974&auto=format&fit=crop',
+                breakdown: {
+                    '北海道': 564, '青森': 85, '岩手': 104, '宮城': 204, '秋田': 102, '山形': 118, '福島': 135, '茨城': 59, '栃木': 39, '埼玉': 13, '千葉': 208, '東京': 200, '神奈川': 65, '新潟': 34, '山梨': 37, '長野': 20, '静岡': 179, '愛知': 125, '滋賀': 7, '京都': 7, '大阪': 32, '兵庫': 39, '和歌山': 18, '鳥取': 55, '島根': 82, '岡山': 18, '広島': 274, '山口': 68, '徳島': 31, '香川': 60, '愛媛': 145, '高知': 35, '福岡': 132
+                },
+                analysis: {
+                    title: '2026年2月期 第1四半期',
+                    sales: '売上高: 2,725億円',
+                    profit: '営業利益: 124億円',
+                    summary: '既存店が好調に推移し、特に調剤と食品が売上を牽引。販管費の抑制も進み、利益率は改善傾向。ウエルシアとの統合でさらなる効率化を目指す。',
+                    challenges: 'ウエルシアとの経営統合後のシナジー最大化、食品部門のさらなる強化、地域ごとの競争激化。',
+                    sales_hint: '食品部門の売上拡大に貢献する商品やソリューションの提案。地域密着型戦略を支援する販促・店舗運営支援。'
+                }
+            },
+            'マツキヨココカラ＆カンパニー': {
+                total: '約3,464店舗',
+                img: 'https://images.unsplash.com/photo-1595153332658-1329389a1d78?q=80&w=2070&auto=format&fit=crop',
+                breakdown: {
+                    '関東': 1522, '近畿': 740, '東海': 330, '九州・沖縄': 312, '甲信越・北陸': 246, '中国・四国': 220, '東北': 112, '北海道': 17
+                },
+                analysis: {
+                    title: '2025年3月期 通期',
+                    sales: '売上高: 1兆616億円 (3.8%増)',
+                    profit: '営業利益: 820億円 (8.4%増)',
+                    summary: 'インバウンド需要の回復と化粧品販売の好調が業績を牽引。PB商品の開発も積極的に進めており、収益性の高い事業構造を構築。',
+                    challenges: '統合シナジーのさらなる創出、PB商品の差別化、インバウンド需要への継続的な対応。',
+                    sales_hint: 'PB商品開発における共同開発やサプライチェーン効率化の提案。インバウンド顧客向けサービスや商品の共同企画。'
+                }
+            },
+            'スギHD': {
+                total: '約1,986店舗',
+                img: 'https://images.unsplash.com/photo-1580913428023-02c695666d61?q=80&w=2070&auto=format&fit=crop', // Placeholder
+                breakdown: {
+                    '関西': 818, '中部': 616, '関東': 589, '北陸・信州': 96, '九州': 38, '北海道・東北': 43, '中国・四国': 7
+                },
+                analysis: {
+                    title: '2026年2月期 第1四半期',
+                    sales: '売上高: 2,454億円 (22.1%増)',
+                    profit: '営業利益: 110億円 (27.9%増)',
+                    summary: '調剤事業のさらなる強化と薬剤師確保、物販領域での競争力維持、M&A後の統合効果最大化。',
+                    challenges: '調剤事業のさらなる強化と薬剤師確保、物販領域での競争力維持、M&A後の統合効果最大化。',
+                    sales_hint: '調剤薬局の効率化ソリューションや薬剤師の業務負担軽減策の提案。物販における顧客体験向上や販促支援。'
+                }
+            },
+            'コスモス薬品': {
+                total: '約1,615店舗',
+                img: 'https://images.unsplash.com/photo-1580913428023-02c695666d61?q=80&w=2070&auto=format&fit=crop', // Placeholder
+                breakdown: {
+                    '九州': 651, '近畿': 258, '中国': 223, '関東': 180, '四国': 153, '中部': 150
+                },
+                analysis: {
+                    title: '2025年5月期 通期',
+                    sales: '売上高: 1兆113億円 (4.8%増)',
+                    profit: '営業利益: 404億円 (28.3%増)',
+                    summary: '積極的な新規出店に伴う店舗運営の効率化、PB商品のさらなる強化、競合との価格競争。',
+                    challenges: '積極的な新規出店に伴う店舗運営の効率化、PB商品のさらなる強化、競合との価格競争。',
+                    sales_hint: '新規出店店舗の立ち上げ支援や効率的な店舗運営ソリューションの提案。PB商品の共同開発やサプライチェーン最適化。'
+                }
+            },
+            'サンドラッグ': {
+                total: '約1,542店舗',
+                img: 'https://images.unsplash.com/photo-1580913428023-02c695666d61?q=80&w=2070&auto=format&fit=crop', // Placeholder
+                breakdown: {
+                    '関東': 497, '中部': 220, '近畿': 197, '九州': 84, '北海道': 80, '東北': 76, '中国・四国': 31
+                },
+                analysis: {
+                    title: '2025年3月期 通期',
+                    sales: '売上高: 8,018億円 (6.7%増)',
+                    profit: '営業利益: 444億円 (8.5%増)',
+                    summary: 'ドラッグストア事業とディスカウントストア事業のシナジー最大化、インバウンド需要への継続的な対応、食品部門の競争力強化。',
+                    challenges: 'ドラッグストア事業とディスカウントストア事業のシナジー最大化、インバウンド需要への継続的な対応、食品部門の競争力強化。',
+                    sales_hint: 'ドラッグストアとディスカウントストア両方の特性を活かした商品・サービスの提案。食品部門の品揃え強化や販促支援。'
+                }
+            },
+            'イオン': {
+                total: '約549店舗（GMS）',
+                img: 'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=1974&auto=format&fit=crop',
+                breakdown: {
+                    '関東': 128, '近畿': 109, '中部': 106, '九州沖縄': 75, '東北': 58, '北海道': 39, '中国': 24, '四国': 10
+                },
+                analysis: {
+                    title: '2025年2月期 通期',
+                    sales: '営業収益: 10兆1,348億円 (6.1%増)',
+                    profit: '営業利益: 2,377億円 (5.2%減)',
+                    summary: '営業収益は10兆円を突破し過去最高を更新。GMS（総合スーパー）事業は苦戦しているものの、金融やディベロッパー事業がグループ全体を支える。今後はデジタルとリアルを融合させた体験価値の向上が課題。',
+                    challenges: 'GMS事業の収益改善、デジタルシフトの加速、グループ全体のシナジー最大化。',
+                    sales_hint: 'GMS事業の活性化に繋がる店舗改装や商品提案。デジタルを活用した顧客体験向上やデータ分析ソリューション。'
+                }
+            },
+            'ライフ': {
+                total: '約312店舗',
+                img: 'https://images.unsplash.com/photo-1588964895597-cf29a31d9d8a?q=80&w=1974&auto=format&fit=crop',
+                breakdown: {
+                    '大阪府': 127, '東京都': 100, '神奈川県': 33, '兵庫県': 21, '京都府': 19, '埼玉県': 8, '千葉県': 5, '奈良県': 3
+                },
+                analysis: {
+                    title: '2026年2月期 第1四半期',
+                    sales: '営業収益: 2,162億円 (4.8%増)',
+                    profit: '営業利益: 77億円 (11.9%増)',
+                    summary: 'PB「BIO-RAL」など独自の商品戦略が奏功し、増収増益を達成。ネットスーパーも好調で、首都圏・近畿圏でのドミナント戦略をさらに強化していく方針。',
+                    challenges: 'PB「BIO-RAL」のさらなる浸透、ネットスーパーの配送効率化、人件費・物流コストの抑制。',
+                    sales_hint: 'PB商品の共同開発や販促支援。ネットスーパーの配送効率化やラストワンマイル配送ソリューション。'
+                }
+            },
+            'ハシドラッグ': {
+                total: '14～16店舗',
+                img: 'https://images.unsplash.com/photo-1580913428023-02c695666d61?q=80&w=2070&auto=format&fit=crop', // Placeholder
+                breakdown: {
+                    '福島県': '14～16'
+                },
+                analysis: {
+                    title: '地域密着型ドラッグストア',
+                    sales: '非公開',
+                    profit: '非公開',
+                    summary: '福島県を中心に地域密着型の店舗展開。医薬品から食品まで幅広く取り扱い、地域住民の生活を支える。',
+                    challenges: '大手チェーンとの競争激化、後継者問題、地域特性に合わせた商品・サービス提供の継続。',
+                    sales_hint: '地域住民のニーズに特化した商品やサービスの提案。大手にはないきめ細やかなサービスを支援するソリューション。'
+                }
+            }
+        };
+
+        const storeList = document.getElementById('store-list');
+        const modal = new bootstrap.Modal(document.getElementById('details-modal'));
+        const storesContent = document.getElementById('stores-content');
+        const analysisContent = document.getElementById('analysis-content');
+
+        for (const [name, data] of Object.entries(companyData)) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${data.img}" class="card-img-top" alt="${name}">
+                <div class="card-body">
+                    <h5 class="card-title">${name}</h5>
+                    <p class="card-text mt-auto">総店舗数: ${data.total}</p>
+                    <button class="btn btn-sm btn-primary" onclick="showDetails('${name}')">詳細を見る</button>
+                </div>
+            `;
+            storeList.appendChild(card);
+        }
+
+        function showDetails(name) {
+            const data = companyData[name];
+            document.getElementById('details-modal-label').textContent = `${name} の詳細情報`;
+
+            // 店舗数タブの内容を生成
+            let storesHtml = '<h6>店舗数 内訳</h6><ul class="list-group">';
+            for (const [region, count] of Object.entries(data.breakdown)) {
+                storesHtml += `<li class="list-group-item d-flex justify-content-between align-items-center">${region}<span class="badge bg-primary rounded-pill">${count}</span></li>`;
+            }
+            storesHtml += '</ul>';
+            storesContent.innerHTML = storesHtml;
+
+            // 企業分析タブの内容を生成
+            let analysisHtml = `
+                <div class="analysis-section">
+                    <h6>${data.analysis.title} 決算概要</h6>
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>${data.analysis.sales}</strong></li>
+                        <li class="list-group-item"><strong>${data.analysis.profit}</strong></li>
+                    </ul>
+                    <p class="mt-3"><strong>分析サマリー:</strong> ${data.analysis.summary}</p>
+                    <h6>主な課題</h6>
+                    <p>${data.analysis.challenges}</p>
+                    <h6>営業アプローチのヒント</h6>
+                    <p>${data.analysis.sales_hint}</p>
+                </div>
+            `;
+            analysisContent.innerHTML = analysisHtml;
+
+            modal.show();
+        }
+
+        function searchStore() {
+            const input = document.getElementById('store-search-input').value.toUpperCase();
+            const cards = document.querySelectorAll('#store-list .card');
+            cards.forEach(card => {
+                const name = card.querySelector('.card-title').textContent.toUpperCase();
+                if (name.includes(input)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
