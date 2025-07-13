@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>業界ニュース速報 | ドラッグストア＆スーパーマーケット</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-color: #007bff;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .section-title {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        .card-deck {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header {
+            font-weight: bold;
+        }
+        .trend-summary {
+            background-color: #e9ecef;
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1 class="display-4">業界ニュース速報</h1>
+        <p class="lead">ドラッグストア＆スーパーマーケットの最新動向をキャッチアップ</p>
+    </header>
+
+    <div class="container mt-5">
+
+        <section id="trends">
+            <h2 class="section-title">最新業界トレンド</h2>
+            <div class="trend-summary">
+                <ul>
+                    <li><strong>業界再編の加速:</strong> 大手同士の経営統合やM&Aにより、市場の寡占化が進行。</li>
+                    <li><strong>「食」分野の強化:</strong> 生鮮食品や総菜の品揃えを強化し、ワンストップショッピングの利便性を追求。</li>
+                    <li><strong>PB商品の重要性向上:</strong> 物価高騰を背景に、高品質・低価格なプライベートブランドが消費者の支持を獲得。</li>
+                    <li><strong>DXとテクノロジー活用:</strong> AIによる需要予測、セルフレジ、ネットスーパーなど、業務効率化と顧客体験向上のための投資が活発化。</li>
+                    <li><strong>ヘルスケアサービスの拡充:</strong> 調剤薬局併設型店舗の増加や、オンライン健康相談など、地域住民の健康を支える拠点としての役割を強化。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="future-outlook" class="my-5">
+            <h2 class="section-title">大手企業の動向から読み解く、業界の未来予測</h2>
+            <div class="accordion" id="outlook-accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            予測1：「ボーダレス化」の加速と専門化の二極化
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#outlook-accordion">
+                        <div class="accordion-body">
+                            <p>ドラッグストアが食品や日用品の品揃えを強化し、スーパーマーケットがヘルスケア関連商品の取り扱いを増やすなど、両者の垣根はますます低くなっています。この「ボーダレス化」は今後さらに加速し、消費者は「どこで何を買うか」をより柔軟に選択するようになるでしょう。</p>
+                            <p>一方で、ウエルシア・ツルハ連合のような巨大グループに対抗するため、特定の分野に特化する「専門化」も進みます。「高級オーガニック専門」「激安ディスカウント」「地域密着型の健康相談拠点」など、独自の強みを打ち出す企業が生き残りの鍵を握ると考えられます。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            予測2：M&Aによる寡占化とPB競争の激化
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#outlook-accordion">
+                        <div class="accordion-body">
+                            <p>大手によるM&Aは、単なる規模の拡大だけでなく、仕入れコストの削減や物流の効率化、データ活用の高度化など、多くのシナジーを生み出します。これにより、大手と中小企業の格差はさらに広がる可能性があります。今後も、大手資本による地場企業の買収や、中堅同士の連携といった業界再編の動きは活発に続くと予測されます。</p>
+                            <p>また、規模のメリットを最大限に活かせるのがプライベートブランド（PB）です。高品質かつ低価格なPB商品は、物価高に悩む消費者の強い味方となります。今後は、価格だけでなく、健康志向や環境配慮といった付加価値を持つPBの開発競争が激化するでしょう。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            予測3：テクノロジー活用が必須の時代へ
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#outlook-accordion">
+                        <div class="accordion-body">
+                            <p>慢性的な人手不足や「物流の2024年問題」は、業界全体の深刻な課題です。これに対応するため、AIによる需要予測や在庫の自動発注、レジの無人化・省人化といったテクノロジーへの投資は、企業の存続に不可欠となります。</p>
+                            <p>さらに、Amazonと地場スーパーの協業のように、ネットスーパーと実店舗の垣根もなくなっていきます。アプリを通じたパーソナライズされた情報提供や、オンラインで注文して店舗で受け取る「クリック＆コレクト」など、デジタルとリアルを融合させたシームレスな顧客体験を提供できる企業が、次世代の勝者となる可能性を秘めています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sales-hint" class="my-5">
+             <h2 class="section-title">営業提案のヒント：未来の店舗像と求められる什器</h2>
+            <div class="accordion" id="sales-accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="salesHeadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#salesCollapseOne" aria-expanded="true" aria-controls="salesCollapseOne">
+                            提案シナリオ1：「食」強化型店舗へのアプローチ
+                        </button>
+                    </h2>
+                    <div id="salesCollapseOne" class="accordion-collapse collapse show" aria-labelledby="salesHeadingOne" data-bs-parent="#sales-accordion">
+                        <div class="accordion-body">
+                            <p><strong>店舗像：</strong>ドラッグストアの生鮮食品導入、スーパーの惣菜・デリコーナー拡充</p>
+                            <p><strong>顧客への訴求ポイント：</strong>「『ついで買い』を促進し、客単価を向上させる魅力的な売り場づくりをご提案します」</p>
+                            <hr>
+                            <p><strong>具体的な什器需要：</strong></p>
+                            <ul>
+                                <li><strong>生鮮・冷凍食品：</strong>視認性が高く、商品を手に取りやすいリーチイン冷蔵・冷凍ケース。特売品をアピールできるアイランド型平ケース。</li>
+                                <li><strong>惣菜・ベーカリー：</strong>出来立て感を演出し、食欲をそそる保温・保冷機能付きデリカ什器。衛生管理とデザイン性を両立したパン陳列棚。</li>
+                                <li><strong>飲料：</strong>店舗の入口付近やレジ横に設置し、衝動買いを誘う小型の冷蔵ショーケース。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="salesHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#salesCollapseTwo" aria-expanded="false" aria-controls="salesCollapseTwo">
+                            提案シナリオ2：「ヘルスケア拠点」型店舗へのアプローチ
+                        </button>
+                    </h2>
+                    <div id="salesCollapseTwo" class="accordion-collapse collapse" aria-labelledby="salesHeadingTwo" data-bs-parent="#sales-accordion">
+                        <div class="accordion-body">
+                            <p><strong>店舗像：</strong>健康相談カウンターやオンライン診療ブースを併設したドラッグストア</p>
+                            <p><strong>顧客への訴求ポイント：</strong>「地域住民の健康をサポートする、信頼感と専門性の高い空間づくりをお手伝いします」</p>
+                            <hr>
+                            <p><strong>具体的な什器需要：</strong></p>
+                            <ul>
+                                <li><strong>相談カウンター：</strong>プライバシーに配慮し、落ち着いて相談できるデザインの受付カウンターやパーテーション。</li>
+                                <li><strong>測定コーナー：</strong>血圧計や体組成計などを設置でき、関連商品を近くに陳列できる一体型什器。</li>
+                                <li><strong>専門商品棚：</strong>サプリメントや介護用品など、カテゴリーごとに専門性を高く見せられる照明・POP一体型のゴンドラ什器。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="salesHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#salesCollapseThree" aria-expanded="false" aria-controls="salesCollapseThree">
+                            提案シナリオ3：「DX・省人化」対応型店舗へのアプローチ
+                        </button>
+                    </h2>
+                    <div id="salesCollapseThree" class="accordion-collapse collapse" aria-labelledby="salesHeadingThree" data-bs-parent="#sales-accordion">
+                        <div class="accordion-body">
+                            <p><strong>店舗像：</strong>セルフレジ、デジタルサイネージ、スマートシェルフなどを導入した次世代店舗</p>
+                            <p><strong>顧客への訴求ポイント：</strong>「店舗運営の効率化と、新しい顧客体験の創出を、什器の観点からサポートします」</p>
+                            <hr>
+                            <p><strong>具体的な什器需要：</strong></p>
+                            <ul>
+                                <li><strong>レジ周辺：</strong>多様な決済端末に対応し、スムーズな会計動線を実現するセルフレジ・セミセルフレジ用カウンター。</li>
+                                <li><strong>販促・情報発信：</strong>デジタルサイネージを組み込み、タイムリーな情報発信が可能なエンド棚やプロモーション什器。</li>
+                                <li><strong>在庫管理：</strong>重量センサーやカメラを内蔵・後付けでき、在庫管理や発注を自動化する「スマートシェルフ」対応の棚。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drugstore-news">
+            <h2 class="section-title">ドラッグストア業界ニュース</h2>
+            <h3 class="h5 text-muted text-center mb-4">大手企業の動向</h3>
+            <div class="card-deck">
+                <!-- ウエルシア -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">ウエルシア</div>
+                    <div class="card-body">
+                        <h5 class="card-title">ツルハと経営統合</h5>
+                        <p class="card-text">2025年12月に統合し、売上高2兆円規模の巨大連合が誕生。調剤事業の強化とヘルスケアサービス「Care Capsule」の展開を推進。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://www.google.com/search?q=ウエルシア+ツルハ+経営統合" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">関連ニュース</a>
+                    </div>
+                </div>
+                <!-- ツルハ -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">ツルハ</div>
+                    <div class="card-body">
+                        <h5 class="card-title">ドミナント戦略を推進</h5>
+                        <p class="card-text">特定地域への集中出店を継続。ウエルシアとの統合により、仕入れコスト削減や経営効率化を目指す。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://www.tsuruha-hd.co.jp/news/" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">公式ニュース</a>
+                    </div>
+                </div>
+                <!-- マツキヨココカラ -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">マツキヨココカラ＆カンパニー</div>
+                    <div class="card-body">
+                        <h5 class="card-title">顧客体験価値の向上</h5>
+                        <p class="card-text">売上高1兆円超。顧客のライフステージに応じた価値提供を戦略の柱とし、PB商品の開発にも注力。</p>
+                    </div>
+                     <div class="card-footer text-end">
+                        <a href="https://www.matsukiyococokara.com/news/" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">公式ニュース</a>
+                    </div>
+                </div>
+                 <!-- クスリのアオキ -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">クスリのアオキ</div>
+                    <div class="card-body">
+                        <h5 class="card-title">フード＆ドラッグ戦略</h5>
+                        <p class="card-text">地方の食品スーパーの買収を積極的に進め、食品分野を強化。ワンストップショッピングの利便性を高める。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://www.kusuri-aoki-hd.co.jp/new/" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">公式ニュース</a>
+                    </div>
+                </div>
+            </div>
+            <h3 class="h5 text-muted text-center mt-5 mb-4">地場企業の動向</h3>
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-header">M&Aによる再編</div>
+                    <div class="card-body">
+                        <h5 class="card-title">大手傘下での生き残り</h5>
+                        <p class="card-text">ウエルシアによる沖縄の「ふく薬品」の子会社化など、大手による地場チェーンのM&Aが活発化。生き残りをかけた再編が進む。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://www.google.com/search?q=ドラッグストア+地場+M&A" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">関連ニュース</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">異業種からの買収</div>
+                    <div class="card-body">
+                        <h5 class="card-title">クスリのアオキの戦略</h5>
+                        <p class="card-text">千葉の「木村屋」や京都の「ハッピーテラダ」など、地場食品スーパーの買収を加速させ、食品分野での競争力を強化。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://www.google.com/search?q=クスリのアオキ+スーパーマーケット+買収" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">関連ニュース</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="supermarket-news">
+            <h2 class="section-title">スーパーマーケット業界ニュース</h2>
+            <h3 class="h5 text-muted text-center mb-4">大手・中堅企業の動向</h3>
+            <div class="card-deck">
+                <!-- オーケー -->
+                <div class="card">
+                    <div class="card-header bg-success text-white">オーケー</div>
+                    <div class="card-body">
+                        <h5 class="card-title">関西圏へ積極出店</h5>
+                        <p class="card-text">2025年に兵庫5店舗、2026年に大阪7店舗の出店を計画。高品質・Everyday Low Price戦略でエリア拡大を目指す。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://ok-corporation.jp/news/" class="btn btn-outline-success btn-sm" target="_blank" rel="noopener noreferrer">公式ニュース</a>
+                    </div>
+                </div>
+                <!-- イズミ -->
+                <div class="card">
+                    <div class="card-header bg-success text-white">イズミ</div>
+                    <div class="card-body">
+                        <h5 class="card-title">西友の九州事業を承継</h5>
+                        <p class="card-text">子会社が西友の九州69店舗を承継。九州エリアでの圧倒的なドミナンスを確立し、競争力を強化する。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://www.izumi.co.jp/corp/news_release/" class="btn btn-outline-success btn-sm" target="_blank" rel="noopener noreferrer">公式ニュース</a>
+                    </div>
+                </div>
+                <!-- バロー -->
+                <div class="card">
+                    <div class="card-header bg-success text-white">バローHD</div>
+                    <div class="card-body">
+                        <h5 class="card-title">M&Aによる基盤強化</h5>
+                        <p class="card-text">愛知県のスーパー「ドミー」を完全子会社化。M&Aを通じて経営基盤の強化とエリア拡大を推進。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://valoroholdings.co.jp/news/" class="btn btn-outline-success btn-sm" target="_blank" rel="noopener noreferrer">公式ニュース</a>
+                    </div>
+                </div>
+            </div>
+            <h3 class="h5 text-muted text-center mt-5 mb-4">地場企業の動向</h3>
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-header">M&Aの加速</div>
+                    <div class="card-body">
+                        <h5 class="card-title">リテールパートナーズの買収</h5>
+                        <p class="card-text">子会社が宮崎の地場スーパー「永野」を買収。大手・中堅による地場スーパーのM&Aが今後も続くと見られる。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://www.google.com/search?q=リテールパートナーズ+永野+買収" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">関連ニュース</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">経営環境の厳しさ</div>
+                    <div class="card-body">
+                        <h5 class="card-title">後継者不足と競争激化</h5>
+                        <p class="card-text">静岡の「スーパーマルトモ」が事業から撤退するなど、後継者不足や大手との競争激化により、厳しい経営判断を迫られる企業も。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https://www.google.com/search?q=地場スーパー+後継者不足+閉店" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">関連ニュース</a>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-header">ネットスーパーの拡大</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Amazonとの協業</h5>
+                        <p class="card-text">九州の地場スーパー「マルキョウ」がAmazonと協業しネットスーパー事業を開始。新たな販路拡大の動きも活発化。</p>
+                    </div>
+                    <div class="card-footer text-end">
+                        <a href="https.www.aboutamazon.jp/news/jp-press/20231128-marukyo-on-amazon" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener noreferrer">関連ニュース</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center text-muted py-4 mt-5">
+        <p>&copy; 2025 業界ニュース速報. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
