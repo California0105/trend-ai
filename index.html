@@ -6,6 +6,7 @@
     <title>業界ニュース速報 | ドラッグストア＆スーパーマーケット</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Noto Sans JP', sans-serif;
@@ -232,6 +233,15 @@
         .analysis-section strong {
             color: #0056b3;
         }
+        .twitter-timeline-container {
+            margin-top: 1.5rem;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #fff;
+            max-height: 400px; /* タイムラインの最大高さを設定 */
+            overflow-y: auto; /* 高さを超えた場合にスクロールバーを表示 */
+        }
     </style>
 </head>
 <body>
@@ -255,6 +265,74 @@
                 </ul>
             </div>
         </section>
+
+        <section id="sales-ranking" class="my-5">
+            <h2 class="section-title">ドラッグストア売上高ランキング (2024-2025年)</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover text-center">
+                    <thead class="table-primary">
+                        <tr>
+                            <th scope="col">順位</th>
+                            <th scope="col">企業名</th>
+                            <th scope="col">売上高</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">1位</th><td>ウエルシアホールディングス</td><td>1兆2,850億円</td></tr>
+                        <tr><th scope="row">2位</th><td>マツキヨココカラ＆カンパニー</td><td>1兆616億円</td></tr>
+                        <tr><th scope="row">3位</th><td>スギホールディングス</td><td>8,780億円</td></tr>
+                        <tr><th scope="row">4位</th><td>ツルハホールディングス</td><td>8,456億円</td></tr>
+                        <tr><th scope="row">5位</th><td>サンドラッグ</td><td>8,018億円</td></tr>
+                        <tr><th scope="row">6位</th><td>コスモス薬品</td><td>7,523億円</td></tr>
+                    </tbody>
+                </table>
+                <small class="text-muted d-block text-end">※各社の決算発表時期により、集計期間は異なります。</small>
+            </div>
+        </section>
+
+        <section id="corporate-structure" class="my-5">
+            <h2 class="section-title">ウエルシアHDとツルハHDの企業構成</h2>
+            <div class="row">
+                <!-- Welcia Holdings -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-primary text-white fw-bold">ウエルシアホールディングス</div>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">主なグループ企業</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">ウエルシア薬局</li>
+                                <li class="list-group-item">シミズ薬品</li>
+                                <li class="list-group-item">丸大サクラヰ薬局</li>
+                                <li class="list-group-item">よどや</li>
+                                <li class="list-group-item">クスリのマルエ</li>
+                                <li class="list-group-item">ププレひまわり</li>
+                                <li class="list-group-item">コクミン</li>
+                                <li class="list-group-item">ふく薬品</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tsuruha Holdings -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-info text-white fw-bold">ツルハホールディングス</div>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">主なグループ企業</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">ツルハ（ツルハドラッグ）</li>
+                                <li class="list-group-item">くすりの福太郎</li>
+                                <li class="list-group-item">ツルハグループドラッグ＆ファーマシー西日本（ウォンツ）</li>
+                                <li class="list-group-item">レデイ薬局</li>
+                                <li class="list-group-item">杏林堂薬局</li>
+                                <li class="list-group-item">ドラッグイレブン</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
 
         <section id="dx-trends" class="my-5">
             <h2 class="section-title">業界別DX（デジタルトランスフォーメーション）の動向</h2>
@@ -393,6 +471,79 @@
                                 <li><strong>レジ周辺：：</strong>多様な決済端末に対応し、スムーズな会計動線を実現するセルフレジ・セミセルフレジ用カウンター。</li>
                                 <li><strong>販促・情報発信：：</strong>デジタルサイネージを組み込み、タイムリーな情報発信が可能なエンド棚やプロモーション什器。</li>
                                 <li><strong>在庫管理：：</strong>重量センサーやカメラを内蔵・後付けでき、在庫管理や発注を自動化する「スマートシェルフ」対応の棚。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="salesHeadingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#salesCollapseFour" aria-expanded="false" aria-controls="salesCollapseFour">
+                            提案シナリオ4：業界課題を解決するテクノロジーと商品（ロボット）
+                        </button>
+                    </h2>
+                    <div id="salesCollapseFour" class="accordion-collapse collapse" aria-labelledby="salesHeadingFour" data-bs-parent="#sales-accordion">
+                        <div class="accordion-body">
+                            <p><strong>店舗像：</strong>人手不足解消、顧客体験向上、効率的な店舗運営を実現するスマートストア</p>
+                            <p><strong>顧客への訴求ポイント：：</strong>「最新テクノロジーとロボット導入で、店舗の生産性を飛躍的に向上させ、未来の小売業をリードしませんか？」</p>
+                            <hr>
+                            <p><strong>具体的な技術・商品需要：：</strong></p>
+                            <ul>
+                                <li><strong>レジ・接客：：</strong>
+                                    <ul>
+                                        <li>AI搭載セルフレジ/無人決済システム（会計の高速化、人件費削減）
+                                            <ul>
+                                                <li>**提供企業・導入実績例:** サインポスト（ワンダーレジ、スーパーワンダー：JCB高田馬場オフィス、横浜高島屋）、ブレイン（EatScan）、京セラ、ファミリーマート、NTTデータ・ダイエー（CATCH&GO）、セキュア、Amazon（Amazon Go/Fresh）</li>
+                                            </ul>
+                                        </li>
+                                        <li>接客・案内ロボット（多言語対応、商品案内、顧客エンゲージメント向上）
+                                            <ul>
+                                                <li>**提供企業・導入実績例:** マックスバリュ西日本（AIさくらさん）、ヤマダ電機（Pepper）、都立産業技術研究センター（Siriusbot：池袋パルコ、東京ビッグサイト）、仲原商事（CORON）、ノジマ（EMIEW3実証実験）、三越伊勢丹</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>品出し・在庫管理：：</strong>
+                                    <ul>
+                                        <li>品出し・棚卸しロボット（夜間作業の自動化、在庫精度99%以上を実現）
+                                            <ul>
+                                                <li>**提供企業・導入実績例:** <a href="https://muse-gr.com/" target="_blank" rel="noopener noreferrer">MUSE</a>のストアロボット「Armo One」（<a href="https://www.belc.jp/" target="_blank" rel="noopener noreferrer">ベルク</a>導入、品出し業務最大30%工数削減）、<a href="https://www.fujitsu.com/jp/" target="_blank" rel="noopener noreferrer">富士通</a>（棚卸しロボット「MATEY」実証実験）、<a href="https://groundinc.co.jp/" target="_blank" rel="noopener noreferrer">GROUND株式会社</a>（自律型協働ロボット「PEER」：カスミに導入）、<a href="https://www.simberobotics.com/" target="_blank" rel="noopener noreferrer">Simbe Robotics</a>（「Tally」）、<a href="https://www.zmp.co.jp/" target="_blank" rel="noopener noreferrer">ZMP</a>（「CarriRo」：棚卸し作業時間8割減）</li>
+                                            </ul>
+                                        </li>
+                                        <li>RFIDタグ/スマートシェルフ（リアルタイム在庫管理、欠品防止、発注自動化）
+                                            <ul>
+                                                <li>**提供企業・導入実績例:** カルチュア・コンビニエンス・クラブ（代官山蔦屋書店にRFタグシステム導入）、<a href="https://www.toppan.co.jp/" target="_blank" rel="noopener noreferrer">凸版印刷株式会社</a>・<a href="https://www.takaya.co.jp/" target="_blank" rel="noopener noreferrer">タカヤ株式会社</a>（スマートシェルフ開発）、<a href="https://www.gap.co.jp/" target="_blank" rel="noopener noreferrer">GAP</a>（RFID導入で売上2%増）、<a href="https://corporate.walmart.com/" target="_blank" rel="noopener noreferrer">Wal-Mart</a>（RFID技術導入）、<a href="https://www.ocadofamily.com/" target="_blank" rel="noopener noreferrer">Ocado</a>（CoreRFIDと協力しRFID技術導入）</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>物流・配送：：</strong>
+                                    <ul>
+                                        <li>店舗内配送ロボット（バックヤードから売り場への商品運搬、従業員の負担軽減）
+                                            <ul>
+                                                <li>**提供企業・導入実績例:** <a href="https://www.daiwabutsuryu.co.jp/" target="_blank" rel="noopener noreferrer">大和物流</a>（iias高尾で配送ロボット「DR2」実証実験）、<a href="https://www.skylark.co.jp/" target="_blank" rel="noopener noreferrer">すかいらーくグループ</a>（ネコ型配膳ロボット「BellaBot」約2100店舗に導入）、<a href="https://www.pudurobotics.com/jp/" target="_blank" rel="noopener noreferrer">Pudu Robotics</a>（BellaBot, HolaBot, PuduBot 2など）、<a href="https://www.keenon.com/jp/" target="_blank" rel="noopener noreferrer">KEENON Robotics</a>（KEENON T8）、<a href="https://corp.rakuten.co.jp/" target="_blank" rel="noopener noreferrer">楽天</a>（自動配送ロボット「楽天無人配送」）</li>
+                                            </ul>
+                                        </li>
+                                        <li>ラストワンマイル配送ロボット/ドローン（ネットスーパーの配送効率化、配送コスト削減）
+                                            <ul>
+                                                <li>**提供企業・導入実績例:** <a href="https://www.sagawa-exp.co.jp/" target="_blank" rel="noopener noreferrer">佐川急便</a>（サンドラッグとドローン配送実証実験）、<a href="https://www.post.japanpost.jp/" target="_blank" rel="noopener noreferrer">日本郵便</a>（ドローンと配送ロボット連携実験）、<a href="https://www.amazon.co.jp/" target="_blank" rel="noopener noreferrer">Amazon</a>（Amazon Prime Air）、<a href="https://nextdelivery.co.jp/" target="_blank" rel="noopener noreferrer">NEXT DELIVERY</a>（ドローン配達サービス）、<a href="https://corp.rakuten.co.jp/" target="_blank" rel="noopener noreferrer">楽天</a>（楽天ドローン）、<a href="https://www.flyzipline.com/" target="_blank" rel="noopener noreferrer">Zipline</a>、<a href="https://www.acsl.co.jp/" target="_blank" rel="noopener noreferrer">ACSL</a> / <a href="https://aeronext.co.jp/" target="_blank" rel="noopener noreferrer">エアロネクスト</a>（AirTruck）、<a href="https://global.canon/ja/" target="_blank" rel="noopener noreferrer">キヤノンMJ</a>、<a href="https://www.panasonic.com/jp/" target="_blank" rel="noopener noreferrer">パナソニック</a>、<a href="https://www.zmp.co.jp/" target="_blank" rel="noopener noreferrer">ZMP</a>、<a href="https://hakobot.com/" target="_blank" rel="noopener noreferrer">Hakobot</a>、<a href="https://www.mitsubishicorp.com/jp/ja/" target="_blank" rel="noopener noreferrer">三菱商事</a> / <a href="https://www.mec.co.jp/" target="_blank" rel="noopener noreferrer">三菱地所</a> / <a href="https://www.tokiomarine-nichido.co.jp/" target="_blank" rel="noopener noreferrer">東京海上日動</a>、<a href="https://www.mitsubishi-logistics.co.jp/" target="_blank" rel="noopener noreferrer">三菱倉庫</a>、<a href="https://www.khi.co.jp/" target="_blank" rel="noopener noreferrer">川崎重工業</a>、<a href="https://www.softbank.jp/" target="_blank" rel="noopener noreferrer">ソフトバンク</a>、<a href="https://www.tis.co.jp/" target="_blank" rel="noopener noreferrer">TIS</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>清掃・セキュリティ：：</strong>
+                                    <ul>
+                                        <li>自律走行清掃ロボット（営業時間外の清掃自動化、衛生レベル維持）
+                                            <ul>
+                                                <li>**提供企業・導入実績例:** <a href="https://www.softbankrobotics.com/jp/" target="_blank" rel="noopener noreferrer">ソフトバンクロボティクス</a>（Whiz / Whiz i）、<a href="https://www.panasonic.com/jp/" target="_blank" rel="noopener noreferrer">パナソニック</a>（RULO Pro / RULO Biz：ヤマト運輸、テルウェル西日本）、<a href="https://www.amano.co.jp/" target="_blank" rel="noopener noreferrer">アマノ</a>（KEMARO K900：アスカ株式会社）、<a href="https://www.irisohyama.co.jp/" target="_blank" rel="noopener noreferrer">アイリスオーヤマ</a>（RACLEBO：エナジーウィズ）、<a href="https://www.maruhan.co.jp/" target="_blank" rel="noopener noreferrer">マルハングループ</a>（清掃コスト最大85%削減）</li>
+                                            </ul>
+                                        </li>
+                                        <li>AI監視カメラ/警備ロボット（万引き防止、不審者検知、店舗セキュリティ強化）
+                                            <ul>
+                                                <li>**提供企業・導入実績例:** <a href="https://ugo.plus/" target="_blank" rel="noopener noreferrer">ugo株式会社</a>（警備ロボット「ugo」：流山おおたかの森S・C、オフィスビル）、<a href="https://www.alsok.co.jp/" target="_blank" rel="noopener noreferrer">ALSOK</a>（自律走行型警備ロボット）、<a href="https://www.toyo-tec.co.jp/" target="_blank" rel="noopener noreferrer">東洋テック</a>（アバター警備ロボット「ugo TSシリーズ」）、<a href="https://www.hacarus.com/" target="_blank" rel="noopener noreferrer">HACARUS</a>（エッジAIカメラ搭載AMR：東京エレクトロン）、<a href="https://www.marubeni-idigio.com/" target="_blank" rel="noopener noreferrer">丸紅I-DIGIOグループ</a>（TRASCOPE-AI）、<a href="https://www.konicaminolta.jp/" target="_blank" rel="noopener noreferrer">コニカミノルタ</a>（AIカメラ）</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -604,11 +755,14 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script>
         const companyData = {
             'ウエルシアHD': {
                 total: '約2,825店舗',
                 img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/%E3%82%A6%E3%82%A8%E3%83%AB%E3%82%B7%E3%82%A2%E3%83%AD%E3%82%B4.svg/1200px-%E3%82%A6%E3%82%A8%E3%83%AB%E3%82%B7%E3%82%A2%E3%83%AD%E3%82%B4.svg.png',
+                x_url: 'https://twitter.com/welcia_jp',
+                twitter_username: 'welcia_jp',
                 breakdown: {
                     '北海道': 7, '東北': 201, '関東': 1377, '中部': 592, '近畿': 529, '中国': 166, '四国': 70, '九州・沖縄': 54
                 },
@@ -619,11 +773,14 @@
                     summary: '調剤併設店舗の増加とPB商品の拡販が奏功し、大幅な増収増益を達成。ツルハとの経営統合を控え、今後の業界再編の核となる。',
                     challenges: 'ツルハとの経営統合に伴うシステム・組織統合、PB商品の競争激化、人件費・物流コストの高騰。',
                     sales_hint: '調剤併設店舗の増加やヘルスケアサービス強化のニーズに対応する提案。PB商品開発における協業の可能性を探る。'
-                }
+                },
+                sns_strategy: '公式X（旧Twitter）を中心に、新商品情報やキャンペーン、健康に関する情報発信を行っています。顧客とのエンゲージメントを高めるため、リポストキャンペーンや質問募集なども積極的に実施しています。'
             },
             'ツルハHD': {
                 total: '約2,662店舗',
-                img: 'https://www.tsuruha-hd.co.jp/img/logo.png', // Assuming this is the logo URL from their site
+                img: 'https://www.tsuruha-hd.co.jp/img/logo.png',
+                x_url: 'https://twitter.com/tsuruhaofficial',
+                twitter_username: 'tsuruhaofficial',
                 breakdown: {
                     '北海道': 564, '青森': 85, '岩手': 104, '宮城': 204, '秋田': 102, '山形': 118, '福島': 135, '茨城': 59, '栃木': 39, '埼玉': 13, '千葉': 208, '東京': 200, '神奈川': 65, '新潟': 34, '山梨': 37, '長野': 20, '静岡': 179, '愛知': 125, '滋賀': 7, '京都': 7, '大阪': 32, '兵庫': 39, '和歌山': 18, '鳥取': 55, '島根': 82, '岡山': 18, '広島': 274, '山口': 68, '徳島': 31, '香川': 60, '愛媛': 145, '高知': 35, '福岡': 132
                 },
@@ -634,11 +791,14 @@
                     summary: '既存店が好調に推移し、特に調剤と食品が売上を牽引。販管費の抑制も進み、利益率は改善傾向。ウエルシアとの統合でさらなる効率化を目指す。',
                     challenges: 'ウエルシアとの経営統合後のシナジー最大化、食品部門のさらなる強化、地域ごとの競争激化。',
                     sales_hint: '食品部門の売上拡大に貢献する商品やソリューションの提案。地域密着型戦略を支援する販促・店舗運営支援。'
-                }
+                },
+                sns_strategy: '公式X（旧Twitter）を中心に、新商品情報やキャンペーン、健康に関する情報発信を行っています。顧客とのエンゲージメントを高めるため、リポストキャンペーンや質問募集なども積極的に実施しています。'
             },
             'マツキヨココカラ＆カンパニー': {
                 total: '約3,464店舗',
                 img: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Matsukio_cocokara_co_logo.svg',
+                x_url: 'https://twitter.com/matsucoco_co',
+                twitter_username: 'matsucoco_co',
                 breakdown: {
                     '関東': 1522, '近畿': 740, '東海': 330, '九州・沖縄': 312, '甲信越・北陸': 246, '中国・四国': 220, '東北': 112, '北海道': 17
                 },
@@ -649,11 +809,14 @@
                     summary: 'インバウンド需要の回復と化粧品販売の好調が業績を牽引。PB商品の開発も積極的に進めており、収益性の高い事業構造を構築。',
                     challenges: '統合シナジーのさらなる創出、PB商品の差別化、インバウンド需要への継続的な対応。',
                     sales_hint: 'PB商品開発における共同開発やサプライチェーン効率化の提案。インバウンド顧客向けサービスや商品の共同企画。'
-                }
+                },
+                sns_strategy: '公式X（旧Twitter）を中心に、新商品情報やキャンペーン、美容・健康に関する情報発信を行っています。インバウンド顧客向けの多言語対応や、SNSを活用した顧客体験価値の向上に注力しています。'
             },
             'スギHD': {
                 total: '約1,986店舗',
-                img: 'https://www.sugi-hd.co.jp/img/logo.png', // Assuming this is the logo URL from their site
+                img: 'https://www.sugi-hd.co.jp/img/logo.png',
+                x_url: 'https://twitter.com/SUGIofficial_JP',
+                twitter_username: 'SUGIofficial_JP',
                 breakdown: {
                     '関西': 818, '中部': 616, '関東': 589, '北陸・信州': 96, '九州': 38, '北海道・東北': 43, '中国・四国': 7
                 },
@@ -664,11 +827,14 @@
                     summary: '調剤事業のさらなる強化と薬剤師確保、物販領域での競争力維持、M&A後の統合効果最大化。',
                     challenges: '調剤事業のさらなる強化と薬剤師確保、物販領域での競争力維持、M&A後の統合効果最大化。',
                     sales_hint: '調剤薬局の効率化ソリューションや薬剤師の業務負担軽減策の提案。物販における顧客体験向上や販促支援。'
-                }
+                },
+                sns_strategy: '公式X（旧Twitter）を中心に、キャンペーン情報やお得なクーポン情報、健康に関する豆知識などを発信しています。アプリ連携を強化し、SNSから店舗への送客を促進しています。'
             },
             'コスモス薬品': {
                 total: '約1,615店舗',
-                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZn0Y08_SbJKGOsjLG2exua0j-kVINBzpszg',
+                img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cosmos_yakuhin_logo.svg/1200px-Cosmos_yakuhin_logo.svg.png',
+                x_url: null, // 公式Xアカウントなし
+                twitter_username: null,
                 breakdown: {
                     '九州': 651, '近畿': 258, '中国': 223, '関東': 180, '四国': 153, '中部': 150
                 },
@@ -679,11 +845,14 @@
                     summary: '積極的な新規出店に伴う店舗運営の効率化、PB商品のさらなる強化、競合との価格競争。',
                     challenges: '積極的な新規出店に伴う店舗運営の効率化、PB商品のさらなる強化、競合との価格競争。',
                     sales_hint: '新規出店店舗の立ち上げ支援や効率的な店舗運営ソリューションの提案。PB商品の共同開発やサプライチェーン最適化。'
-                }
+                },
+                sns_strategy: '公式SNSアカウントは確認できませんが、地域密着型の店舗展開を重視しており、チラシや店頭での情報発信が中心と考えられます。'
             },
             'サンドラッグ': {
                 total: '約1,542店舗',
-                img: 'https://www.sundrug.co.jp/img/logo.png', // Assuming this is the logo URL from their site
+                img: 'https://www.sundrug.co.jp/img/logo.png',
+                x_url: 'https://twitter.com/sundrugofficial',
+                twitter_username: 'sundrugofficial',
                 breakdown: {
                     '関東': 497, '中部': 220, '近畿': 197, '九州': 84, '北海道': 80, '東北': 76, '中国・四国': 31
                 },
@@ -694,11 +863,14 @@
                     summary: 'ドラッグストア事業とディスカウントストア事業のシナジー最大化、インバウンド需要への継続的な対応、食品部門の競争力強化。',
                     challenges: 'ドラッグストア事業とディスカウントストア事業のシナジー最大化、インバウンド需要への継続的な対応、食品部門の競争力強化。',
                     sales_hint: 'ドラッグストアとディスカウントストア両方の特性を活かした商品・サービスの提案。食品部門の品揃え強化や販促支援。'
-                }
+                },
+                sns_strategy: '公式X（旧Twitter）を中心に、セール情報や限定商品の紹介、美容・健康に関するコンテンツを発信しています。顧客の購買意欲を刺激する情報提供に力を入れています。'
             },
             'イオン': {
                 total: '約549店舗（GMS）',
                 img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/AEON_logo.svg/1200px-AEON_logo.svg.png',
+                x_url: 'https://twitter.com/AEON_KINKI', // イオンリテール近畿カンパニー
+                twitter_username: 'AEON_KINKI',
                 breakdown: {
                     '関東': 128, '近畿': 109, '中部': 106, '九州沖縄': 75, '東北': 58, '北海道': 39, '中国': 24, '四国': 10
                 },
@@ -709,11 +881,14 @@
                     summary: '営業収益は10兆円を突破し過去最高を更新。GMS（総合スーパー）事業は苦戦しているものの、金融やディベロッパー事業がグループ全体を支える。今後はデジタルとリアルを融合させた体験価値の向上が課題。',
                     challenges: 'GMS事業の収益改善、デジタルシフトの加速、グループ全体のシナジー最大化。',
                     sales_hint: 'GMS事業の活性化に繋がる店舗改装や商品提案。デジタルを活用した顧客体験向上やデータ分析ソリューション。'
-                }
+                },
+                sns_strategy: 'グループ全体で多様なSNSアカウントを運用し、各事業の特性に合わせた情報発信を行っています。キャンペーン情報、商品紹介、地域イベントの告知など、幅広いコンテンツで顧客との接点強化を図っています。'
             },
             'ライフ': {
                 total: '約312店舗',
                 img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/LIFE_CORPORATION_logo.png/1024px-LIFE_CORPORATION_logo.png',
+                x_url: 'https://twitter.com/lifecorp_east', // ライフ首都圏【公式】
+                twitter_username: 'lifecorp_east',
                 breakdown: {
                     '大阪府': 127, '東京都': 100, '神奈川県': 33, '兵庫県': 21, '京都府': 19, '埼玉県': 8, '千葉県': 5, '奈良県': 3
                 },
@@ -724,11 +899,14 @@
                     summary: 'PB「BIO-RAL」など独自の商品戦略が奏功し、増収増益を達成。ネットスーパーも好調で、首都圏・近畿圏でのドミナント戦略をさらに強化していく方針。',
                     challenges: 'PB「BIO-RAL」のさらなる浸透、ネットスーパーの配送効率化、人件費・物流コストの抑制。',
                     sales_hint: 'PB商品の共同開発や販促支援。ネットスーパーの配送効率化やラストワンマイル配送ソリューション。'
-                }
+                },
+                sns_strategy: '首都圏と近畿圏でそれぞれ公式Xアカウントを運用し、地域に特化した商品情報やキャンペーン、レシピなどを発信しています。顧客の食生活に寄り添うコンテンツが特徴です。'
             },
             'ハシドラッグ': {
                 total: '14～16店舗',
-                img: 'https://www.hashi-drug.co.jp/images/logo.png', // Assuming this is the logo URL from their site
+                img: 'https://www.hashi-drug.co.jp/images/logo.png',
+                x_url: 'https://twitter.com/hashi_drug',
+                twitter_username: 'hashi_drug',
                 breakdown: {
                     '福島県': '14～16'
                 },
@@ -739,7 +917,26 @@
                     summary: '福島県を中心に地域密着型の店舗展開。医薬品から食品まで幅広く取り扱い、地域住民の生活を支える。',
                     challenges: '大手チェーンとの競争激化、後継者問題、地域特性に合わせた商品・サービス提供の継続。',
                     sales_hint: '地域住民のニーズに特化した商品やサービスの提案。大手にはないきめ細やかなサービスを支援するソリューション。'
-                }
+                },
+                sns_strategy: '公式X（旧Twitter）を通じて、地域に根ざした情報発信や、店舗のイベント告知などを行っています。地域住民とのコミュニケーションを重視しています。'
+            },
+            'ドラッグストアモリ': {
+                total: '約413店舗',
+                img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Drugstore_Mori_logo.svg/1200px-Drugstore_Mori_logo.svg.png',
+                x_url: 'https://twitter.com/doramori_kun',
+                twitter_username: 'doramori_kun',
+                breakdown: {
+                    '福岡県': 117, '佐賀県': 41, '長崎県': 33, '大分県': 31, '熊本県': 33, '宮崎県': 29, '鹿児島県': 41, '沖縄県': 22, '山口県': 20, '愛媛県': 15, '徳島県': 15, '宮城県': 16
+                },
+                analysis: {
+                    title: '2025年3月期',
+                    sales: '売上高: 2,127億円',
+                    profit: '非公開',
+                    summary: '九州地方を基盤に、中国、四国、東北へと店舗網を拡大中。「食品の安さ」を強みに、地域一番の店舗を目指す。1店舗あたりの売上高が高いのが特徴。',
+                    challenges: '九州エリアでの競争激化、他エリアでのドミナント形成、PB商品の開発力強化。',
+                    sales_hint: '新規出店エリアでの認知度向上施策、食品部門の品揃え強化や販促支援、効率的な店舗運営ソリューションの提案。'
+                },
+                sns_strategy: '公式X（旧Twitter）で、食品の安さを強みとした商品情報や、地域に合わせたキャンペーン情報を発信しています。フォロワーとの交流も積極的に行っています。'
             }
         };
 
@@ -752,8 +949,7 @@
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
-                <img src="${data.img}" class="card-img-top" alt="${name}">
-                <div class="card-body">
+                <div class="card-body text-center">
                     <h5 class="card-title">${name}</h5>
                     <p class="card-text mt-auto">総店舗数: ${data.total}</p>
                     <button class="btn btn-sm btn-primary" onclick="showDetails('${name}')">詳細を見る</button>
@@ -787,11 +983,82 @@
                     <p>${data.analysis.challenges}</p>
                     <h6>営業アプローチのヒント</h6>
                     <p>${data.analysis.sales_hint}</p>
+                    <h6>SNS戦略</h6>
+                    <p>${data.sns_strategy}</p>
+                    ${data.x_url ? `
+                    <h6>公式X (旧Twitter)</h6>
+                    <p><a href="${data.x_url}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> ${name} 公式X</a></p>
+                    ` : ''}
+                    ${data.twitter_username ? `
+                    <h6>最新のX (旧Twitter) 投稿</h6>
+                    <div id="twitter-timeline-container-${name}" class="twitter-timeline-container"></div>
+                    ` : ''}
                 </div>
             `;
             analysisContent.innerHTML = analysisHtml;
 
             modal.show();
+
+            // Twitterタイムラインの埋め込み
+            if (data.twitter_username) {
+                const twitterContainerId = `twitter-timeline-container-${name}`;
+                const twitterContainer = document.getElementById(twitterContainerId);
+                if (twitterContainer && typeof twttr !== 'undefined' && twttr.widgets) {
+                    twttr.widgets.createTimeline(
+                        {
+                            sourceType: "profile",
+                            screenName: data.twitter_username
+                        },
+                        twitterContainer,
+                        {
+                            width: '100%',
+                            height: 350,
+                            chrome: 'noheader,nofooter,noborders,noscrollbar'
+                        }
+                    ).then(function (el) {
+                        // タイムラインが正常に埋め込まれた場合の処理
+                    }).catch(function (err) {
+                        console.error("Failed to load Twitter timeline:", err);
+                    });
+                } else if (twitterContainer) {
+                    // twttrオブジェクトがまだロードされていない場合、ロード後に実行するように待機
+                    window.twttr = (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0],
+                            t = window.twttr || {};
+                        if (d.getElementById(id)) return t;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+
+                        t._e = [];
+                        t.ready = function(f) {
+                            t._e.push(f);
+                        };
+
+                        return t;
+                    }(document, "script", "twitter-wjs"));
+
+                    twttr.ready(function (twttr) {
+                        twttr.widgets.createTimeline(
+                            {
+                                sourceType: "profile",
+                                screenName: data.twitter_username
+                            },
+                            twitterContainer,
+                            {
+                                width: '100%',
+                                height: 350,
+                                chrome: 'noheader,nofooter,noborders,noscrollbar'
+                            }
+                        ).then(function (el) {
+                            // タイムラインが正常に埋め込まれた場合の処理
+                        }).catch(function (err) {
+                            console.error("Failed to load Twitter timeline:", err);
+                        });
+                    });
+                }
+            }
         }
 
         function searchStore() {
